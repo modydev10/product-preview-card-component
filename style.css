@@ -17,12 +17,12 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url(/design/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    src: url(design/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: 'Fraunces';
-    src: url(/design/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    src: url(design/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
 h1 {
