@@ -25,9 +25,7 @@
     src: url(design/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
-h1 {
-    font-family: Fraunces;
-}
+
 
 
 body {
@@ -35,6 +33,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    font-family: Montserrat;
 }
 
 
@@ -42,7 +41,7 @@ body {
 main {
     /* border: 2px solid blue; */
     width: 600px;
-    max-width: 90%;
+    max-width: 80%;
     height: 400px;
     max-height: 90%;
     background: #fff;
@@ -50,59 +49,75 @@ main {
     overflow: hidden;
     position: absolute;
     display: flex;
+    /* justify-content: space-between; */
 }
 
 
-#desktop-img {
-    width: 50%;
-    height: 100%;
+#img-for-desktop {
+    /* border: 2px solid green; */
+    /* width: 50%; */
+    /* height: 100%; */
+}
+
+#img-for-mobile {
+    display: none;
 }
 
 div.info-container {
     /* border: 2px solid red; */
+    /* width: 50%; */
     /* height: 100%; */
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
 }
 
-span.product-name, span.product-description, span.price-before-discount {
+h1 {
+    font-family: Fraunces;
+    /* font-size: clamp(16px, 3vw, 3rem); */
+    /* font-size: 2.5vw; */
+}
+
+span.product-name,
+span.product-description,
+span.price-before-discount {
     color: var(--Grey);
 }
 
-span.product-name {
-    /* sans-serif is a temporary value */
-    font-family: sans-serif;
-}
 
 span.product-description {
-    font-family: sans-serif;
+    font-size: 16px;
+}
+
+div.price-container {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 span.price-after-discount {
     font-family: Fraunces;
     font-weight: 700;
     color: var(--Green500);
-    font-size: 30px;
+    /* font-size: clamp(20px, 3vw, 2rem); */
+    font-size: 32px;
 }
 
 span.price-before-discount {
     text-decoration: line-through;
+    /* font-size: clamp(12px, 1.2vw, 1rem) */
 }
 
-div.price-container {
-    border: 2px solid red;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
 
 #add-to-cart-btn {
     background: var(--Green500);
     border: none;
-    border-radius: 12px;
+    border-radius: 5px;
     height: 40px;
     color: #fff;
     display: flex;
@@ -117,8 +132,120 @@ div.price-container {
 }
 
 
-@media(max-width: 500px) {
+
+@media(max-width: 750px) {
     body {
-        /* background: red; */
+        background: red;
+    }
+    main {
+        height: 380px}
+    span.product-name {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #add-to-cart-btn {
+        height: 35px;
+    }
+
+    span.price-after-discount {
+        font-size: 30px;
+    }
+
+    span.price-before-discount {
+        font-size: 14px
+    }
+
+    span.product-description {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 630px) {
+    body {
+        background: blue;
+    }
+    main {
+        height: 350px
+    }
+    span.product-name {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    #add-to-cart-btn {
+        height: 30px;
+    }
+
+    span.price-after-discount {
+        font-size: 27px;
+    }
+
+    span.price-before-discount {
+        font-size: 12px
+    }
+
+    span.product-description {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 590px) {
+    body {
+        background: yellow;
+    }
+    main {
+        border: 2px solid blue;
+        flex-direction: column;
+        width: 50%;
+        height: 80%;
+        /* justify-content: space-between; */
+    }
+
+    #img-for-desktop {
+        display: none;
+    }
+
+    #img-for-mobile {
+        display: block;
+        height: 50%;
+    }
+
+    div.info-container {
+        padding: 15px;
+        border: 2px solid red;
+        height: 50%;
+    }
+
+
+    span.product-name {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #add-to-cart-btn {
+        height: 25px;
+        font-size: 10px;
+    }
+
+    span.price-after-discount {
+        font-size: 23px;
+    }
+
+    span.price-before-discount {
+        font-size: 10px;
+    }
+
+    span.product-description {
+        font-size: 10px;
     }
 }
